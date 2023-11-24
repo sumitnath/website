@@ -1,0 +1,289 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+:root {
+    --h1:40px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 16px;
+
+    --sub: 20px;
+
+    --label: 16px;
+    --ls: 5px;
+
+    --body:14px;    
+
+    --font-1: 'Crimson Text', serif ;
+    --font-2: 'Work Sans', sans-serif;
+
+    --color-dark-100 : rgba(33, 37, 41, 1);
+    --color-dark-75 : rgba(33, 37, 41, 0.75);
+    --color-dark-50 : rgba(33, 37, 41, 0.5);
+    --color-dark-25 : rgba(33, 37, 41, 0.25);
+
+    --color-white-100: rgba(225,225,225,1);
+    --color-white-75: rgba(225,225,225,0.75);
+    --color-white-50: rgba(225,225,225,0.5);
+    --color-white-25: rgba(225,225,225,0.25);
+
+
+    --color-green-100: rgba(116,198,157,1);
+    --color-green-75: rgba(116,198,157,0.75);
+    --color-green-50: rgba(116,198,157,0.5);
+    --color-green-25: rgba(116,198,157,0.25);
+
+    --shadow-1 : 3px 4px 12px 1px rgba(0,0,0,0.25)
+
+}
+
+/**
+* ! this is how we write in red color
+**/
+/**
+* ? this is how we write in blue  color
+**/
+
+
+/**
+* ! removing defalt styles of the browser
+**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/**
+* ! styles rules for common buttons
+**/
+.dark-btn ,.white-btn{
+color: var(--color-dark-100);
+background-color: var(--color-white-100);
+cursor: pointer;
+font-size: var(--h5);
+font-family: var(--font-2);
+border: none;
+border-radius: 8px;
+padding: 10px 40px;
+}
+
+.dark-btn{
+ color: var(--color-white-100);
+background-color: var(--color-dark-100);
+}
+
+/**
+* ! styles rules for text colors
+**/
+.text-white{
+    color: var(--color-white-100);
+}
+
+.text-dark{
+    color: var(--color-dark-100);
+}
+
+.text-green{
+    color: var(--color-green-100);
+}
+
+/**
+* ! styles rules for labels
+**/
+.label{
+    font-family: var(--font-2);
+    font-size: var(--label);
+    letter-spacing:  var(--ls);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/**
+* ! styles rules for images
+**/
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+  }
+/**
+* ! styles rules for section
+**/
+.grid{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    align-items: center;
+    padding: 40px 0px;
+    gap:25px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commontitle{
+    text-transform: capitalize;
+    font-size: var(--h1);
+    font-family: var(--font-1);
+    font-weight: bold;
+}
+
+/**
+* ! styles rules for container Hero
+**/
+.hero{
+    background-color: var(--color-green-100);
+}
+
+/**
+* ! styles rules for navbar and its famly
+**/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    padding: 30px 0;
+}
+
+/**
+* ! styles rules for navbar logo
+**/
+.navbar__logo{
+display: flex;
+flex-direction: row;
+align-items: center;
+gap:3vw;
+}
+
+.navbar__logo--text{
+    font-size: var(--h2);
+    font-family: var(--font2);
+    font-weight: 500;
+    color: var(--color-white-100)
+}
+
+.navbar__menu{
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    font-family: var(--font-2);
+    font-size: var(--h5);
+}
+
+[class ^="navbar__menu--"]{
+color: var(--color-white-100);
+text-decoration: none;
+}
+.navbar__icons{
+    display: none;
+}
+.navbar__icons i{
+    font-size: var(--h2);
+    color: var(--color-white-100);
+    cursor: pointer;  
+}
+/**
+* ! styles rules for common 
+**/
+.text-center{
+    text-align: center;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+  }
+
+/**
+  *! rule for footer
+  */
+  .footerWrapper{
+    background-color: var(--color-green-100);
+  
+  }
+  .footerLinks{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    
+  }
+  [class ^="footerLinks__"]{
+    display:flex ;
+    gap:15px;
+  }
+  .footerLinks__copyrights{
+  font-size: var(--sub);
+  font-family: var(--font-2);
+  }
+
+
+
+/**
+* !  Media query  
+**/
+@media (max-width: 1200px) {
+    .container {
+      max-width: 970px;
+    } 
+}
+@media (max-width: 1024px) {
+    .container {
+      max-width: 740px;
+    } 
+    .commontitle{
+        font-size: var(--h4);
+      }
+}   
+
+@media (max-width: 768px) {
+    .container {
+      max-width: 500px;
+    }
+    
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+        gap:50px;
+        }
+    .navbar__menu{
+    /* display: none; */
+    z-index: 1;
+    position: absolute;
+    left:0;
+    top:15vh;
+    background-color: var(--color-green-100);
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    }
+    .navbar__menu--1{
+        margin-top: -200px;
+    }
+   .navbar__icons{  
+    display: block;     
+   }    
+   .hide {
+    display: none;
+  }
+   .hidden{
+    z-index: -1;
+    opacity: 0%;
+   }
+   
+ .footerLinks{
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    }
+}
+@media (max-width: 568px){
+    .container{
+        max-width: 90%;
+     }     
+}
+

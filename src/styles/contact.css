@@ -1,0 +1,77 @@
+/**
+*! rule for sesectionOne
+**/
+.sectionOne{
+    display: grid;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    }
+.sectionOne__content--text {
+    font-size: var(--sub);
+    font-family: var(--font-2);
+  }
+.sectionOne__contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top:35px;
+    margin-bottom:30px;
+    column-gap:25px;
+   
+}
+.form-1{
+    display: flex;
+    flex-direction: column;
+    height:450px;
+  
+}
+label {
+    font-family: var(--font-2);
+    font-size: var(--sub);
+  }
+  input,
+  textarea{
+    padding:10px;
+    margin:10px 0px;
+    background-color: #eeeeee;
+    border:1.5px solid #212523;
+    border-radius:5px;
+  }
+  textarea{
+margin-bottom: 25px;
+  }
+  .sectionOne__btn{
+    justify-self: center;
+  }
+
+/**
+*! rule for media query
+**/
+@media (max-width: 1024px){
+    .sectionOne__contact{
+        grid-template-columns: repeat(1,.80fr);
+ justify-content: center;
+    }
+    .sectionOne__contact--map{
+     order:0;
+    }
+    .sectionOne__contact--form{
+        order:1;
+    }
+}
+@media (max-width: 768px) {
+    
+    iframe{
+        width:500px;
+    }
+}    
+  
+  @media (max-width: 568px) {
+    .sectionOne__contact{
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+    }
+    iframe{
+        width:480px;
+    }
+      }
